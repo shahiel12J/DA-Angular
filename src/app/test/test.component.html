@@ -1,0 +1,16 @@
+<body>
+    
+    <div class="container" >
+        <div class="row" >
+                <div class="card" *ngFor="let dataItem of testData">
+                    <img src="{{dataItem.image}}" width="100" height="100" alt="Avatar" >
+                    <div class="container">
+                      <h4><b>{{dataItem.title}}</b></h4> 
+                      <p>{{dataItem.category}}</p>
+                      <p>R{{dataItem.price}}</p>
+                      <p>{{dataItem.description}}</p> 
+                    </div>
+                  </div>
+        </div>
+      </div>
+</body>
