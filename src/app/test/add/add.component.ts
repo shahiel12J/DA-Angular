@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TestService } from 'src/app/Services/test.service'; 
+import { Test } from 'src/app/Models/test';
 
 @Component({
   selector: 'app-add',
@@ -10,26 +11,28 @@ export class AddComponent {
 
   constructor(private service: TestService ) { }
 
-  title: string | undefined;
-  price: number| undefined;
-  des: string | undefined;
-  img: string| undefined;
-  cat: string| undefined;
+  title!: string ;
+  price!: number;
+  des!: string ;
+  img!: string;
+  cat!: string;
 
   ngOnInit(): void {
     
   }
 
   addPro(){
+
     var val = 
-     {Title:this.title,
-      Price:this.price,
-      Description:this.des,
-      Image:this.img,
-      Category:this.cat}
-  
-        this.service.addData(val).subscribe(res =>{
-          console.log(res)
+    JSON.stringify( {title:this.title,
+      price:Number(this.price),
+      description:this.des,
+      image:this.img,
+      category:this.cat})
+
+      // console.log(val)
+        this.service.addData( {title: this.title, price: Number(this.price), description: this.des, image: this.img, category: this.cat}).subscribe(res =>{
+          console.log(JSON.stringify({title: this.title, price: Number(this.price), description: this.des, image: this.img, category: this.cat}))
         })
       
   }
