@@ -8,6 +8,8 @@ const routes: Routes = [
   {path:"" , component: TestComponent, data : {animation: "isRight"}},
   {path:"add" , component: AddComponent, data : {animation: "isRight"}},
   {path:"update" , component: UpdateComponent, data : {animation: "isRight"}},
+  {path:"*" , component: TestComponent, data : {animation: "isRight"}},
+
 ];
 
 @NgModule({

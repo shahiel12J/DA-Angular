@@ -20,7 +20,7 @@ export class TestService {
   }
 
   public getIData(id:any): Observable < any [] >{
-    return this.http.get< any >("http://localhost:5000/getIpro/" + id);
+    return this.http.get< any >(`http://localhost:5000/getIpro/${id}`);
   }
 
   public addData(val:Test): Observable<any> {

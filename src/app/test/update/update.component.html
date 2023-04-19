@@ -2,11 +2,22 @@
     <div class="row" >
             <div class="card" >
                 <div class="container" ><br>
-                  <input type=text [(ngModel)]="title" value="{{this.titlePlaceholder}}"/><br><br>
-                  <input type=text [(ngModel)]="price" value="{{this.pricePlaceholder}}"/><br><br>
-                  <textarea class="textarea" value="{{this.desPlaceholder}}" [(ngModel)]="des"></textarea><br><br>
-                  <input type=text [(ngModel)]="img" value="{{this.imgPlaceholder}}"/><br><br>
-                  <input type=text [(ngModel)]="cat" value="{{this.catPlaceholder}}"/><br><br>
+
+                  <label for="title">Title</label><br>
+                  <input id="title" type=text [(ngModel)]="title" value="{{this.titlePlaceholder}}"/><br><br>
+
+                  <label for="Price">Price</label><br>
+                  <input id="Price" type=text [(ngModel)]="price" value="{{this.pricePlaceholder}}"/><br><br>
+
+                  <label for="Description">Description</label><br>
+                  <textarea id="Description" class="textarea" value="{{this.desPlaceholder}}" [(ngModel)]="des"></textarea><br><br>
+
+                  <label for="image">Image</label><br>
+                  <input id="image" type=text [(ngModel)]="img" value="{{this.imgPlaceholder}}"/><br><br>
+
+                  <label for="cat">Category</label><br>
+                  <input id="cat" type=text [(ngModel)]="cat" value="{{this.catPlaceholder}}"/><br><br>
+
                 </div>
                 <button mat-raised-button  class="btn btn-primary" (click)="update()">update Product</button><br>
                 <button class="btn btn-danger" routerLink="" >Back</button><br><br>
