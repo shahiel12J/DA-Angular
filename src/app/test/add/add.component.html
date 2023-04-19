@@ -1,7 +1,15 @@
-<input type=text [(ngModel)]="title" placeholder="title"/><br><br>
-<input type=text [(ngModel)]="price" placeholder="price"/><br><br>
-<input type=text [(ngModel)]="des" placeholder="des"/><br><br>
-<input type=text [(ngModel)]="img" placeholder="img"/><br><br>
-<input type=text [(ngModel)]="cat" placeholder="cat"/><br><br>
-
-<button mat-raised-button  class="btn" (click)="addPro()">Add Product</button><br><br>
+<div class="container" >
+      <div class="row" >
+              <div class="card" >
+                  <div class="container"><br>
+                    <input type=text [(ngModel)]="title" placeholder="Title"/><br><br>
+                    <input type=text [(ngModel)]="price" placeholder="Price"/><br><br>
+                    <textarea class="textarea" placeholder="Description" [(ngModel)]="des"></textarea><br><br>
+                    <input type=text [(ngModel)]="img" placeholder="image"/><br><br>
+                    <input type=text [(ngModel)]="cat" placeholder="Category"/><br><br>
+                  </div>
+                  <button mat-raised-button  class="btn btn-primary" (click)="addPro()">Add Product</button><br>
+                  <button class="btn btn-danger" routerLink="" >Back</button><br><br>
+                </div>
+      </div>
+    </div>

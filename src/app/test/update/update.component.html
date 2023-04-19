@@ -1,0 +1,15 @@
+<div class="container" >
+    <div class="row" >
+            <div class="card" >
+                <div class="container" ><br>
+                  <input type=text [(ngModel)]="title" value="{{this.titlePlaceholder}}"/><br><br>
+                  <input type=text [(ngModel)]="price" value="{{this.pricePlaceholder}}"/><br><br>
+                  <textarea class="textarea" value="{{this.desPlaceholder}}" [(ngModel)]="des"></textarea><br><br>
+                  <input type=text [(ngModel)]="img" value="{{this.imgPlaceholder}}"/><br><br>
+                  <input type=text [(ngModel)]="cat" value="{{this.catPlaceholder}}"/><br><br>
+                </div>
+                <button mat-raised-button  class="btn btn-primary" (click)="update()">update Product</button><br>
+                <button class="btn btn-danger" routerLink="" >Back</button><br><br>
+              </div>
+    </div>
+  </div>

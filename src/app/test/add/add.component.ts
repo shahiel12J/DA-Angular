@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TestService } from 'src/app/Services/test.service'; 
 import { Test } from 'src/app/Models/test';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -9,7 +10,7 @@ import { Test } from 'src/app/Models/test';
 })
 export class AddComponent {
 
-  constructor(private service: TestService ) { }
+  constructor(private service: TestService, private router : Router ) { }
 
   title!: string ;
   price!: number;
@@ -32,7 +33,7 @@ export class AddComponent {
 
       // console.log(val)
         this.service.addData( {title: this.title, price: Number(this.price), description: this.des, image: this.img, category: this.cat}).subscribe(res =>{
-          console.log(JSON.stringify({title: this.title, price: Number(this.price), description: this.des, image: this.img, category: this.cat}))
+          this.router.navigate([''])
         })
       
   }

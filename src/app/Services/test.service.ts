@@ -11,24 +11,28 @@ export class TestService {
 
   constructor(private http:HttpClient) { }
 
+  // public getData(): Observable < any [] >{
+  //   return this.http.get< any >("https://fakestoreapi.com/products");
+  // }
+
   public getData(): Observable < any [] >{
-    return this.http.get< any >("https://fakestoreapi.com/products");
+    return this.http.get< any >("http://localhost:5000/getpro");
   }
 
   public getIData(id:any): Observable < any [] >{
-    return this.http.get< any >("https://fakestoreapi.com/products/" + id);
+    return this.http.get< any >("http://localhost:5000/getIpro/" + id);
   }
 
   public addData(val:Test): Observable<any> {
     return this.http.post("http://localhost:5000/addpro", val);
   }
 
-  public updateData(val:any, id:any){
-    return this.http.put("https://fakestoreapi.com/products/" + id, val);
+  public updateData(val:Test, id:any){
+    return this.http.put("http://localhost:5000/update/" + id, val);
   }
 
-  public deleteDate(id:any){
-    return this.http.delete("https://fakestoreapi.com/products/" + id);
+  public deleteData(id:any){
+    return this.http.delete("http://localhost:5000/delete/" + id);
   }
 
 }
