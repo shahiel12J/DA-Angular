@@ -33,7 +33,6 @@ export class UpdateComponent {
 
   update(){
         this.service.updateData(( {title: this.title, price: Number(this.price), description: this.des, image: this.img, category: this.cat}), this.ID).subscribe(res =>{
-          console.log(JSON.stringify({title: this.title, price: Number(this.price), description: this.des, image: this.img, category: this.cat}))
           this.router.navigate([''])
         })
   }
