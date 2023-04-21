@@ -1,26 +1,29 @@
-<div class="container" >
-      <div class="row" >
-              <div class="card" >
-                  <div class="container"><br>
+<body>
+  <div class="container" >
+    <div class="row" >
+            <div class="card" >
+              <h2>Add New Product</h2>
+                <div class="container"><br>
 
-                    <label for="title">Title</label><br>
-                    <input id="title" type=text [(ngModel)]="title" placeholder="Title"/><br><br>
+                  <label for="title">Title</label><br>
+                  <input id="title" type=text [(ngModel)]="title" placeholder="Title"/><br><br>
 
-                    <label for="Price">Price</label><br>
-                    <input id="Price" type=text [(ngModel)]="price" placeholder="Price"/><br><br>
+                  <label for="Price">Price</label><br>
+                  <input id="Price" type=text [(ngModel)]="price" placeholder="Price"/><br><br>
 
-                    <label for="Description">Description</label><br>
-                    <textarea id="Description" class="textarea" placeholder="Description" [(ngModel)]="des"></textarea><br><br>
+                  <label for="Description">Description</label><br>
+                  <textarea id="Description" class="textarea" placeholder="Description" [(ngModel)]="des"></textarea><br><br>
 
-                    <label for="image">Image</label><br>
-                    <input id="image" type=text [(ngModel)]="img" placeholder="image"/><br><br>
+                  <label for="image">Image</label><br>
+                  <input id="image" type=text [(ngModel)]="img" placeholder="image"/><br><br>
 
-                    <label for="cat">Category</label><br>
-                    <input id="cat" type=text [(ngModel)]="cat" placeholder="Category"/><br><br>
+                  <label for="cat">Category</label><br>
+                  <input id="cat" type=text [(ngModel)]="cat" placeholder="Category"/><br><br>
 
-                  </div>
-                  <button mat-raised-button  class="btn btn-primary" (click)="addPro()">Add Product</button><br>
-                  <button class="btn btn-danger" routerLink="" >Back</button><br><br>
                 </div>
-      </div>
+                <button mat-raised-button  class="btn btn-primary" (click)="addPro()">Add Product</button><br>
+                <button class="btn btn-danger" routerLink="" >Back</button><br><br>
+              </div>
     </div>
+  </div>
+</body>

@@ -24,12 +24,12 @@ export class AddComponent {
 
   addPro(){
 
-    var val = 
-    JSON.stringify( {title:this.title,
-      price:Number(this.price),
-      description:this.des,
-      image:this.img,
-      category:this.cat})
+    // var val = 
+    // JSON.stringify( {title:this.title,
+    //   price:Number(this.price),
+    //   description:this.des,
+    //   image:this.img,
+    //   category:this.cat})
 
       // console.log(val)
         this.service.addData( {title: this.title, price: Number(this.price), description: this.des, image: this.img, category: this.cat}).subscribe(res =>{
